@@ -73,28 +73,6 @@ xui.Class('App', 'xui.Module',{
             );
             
             host.ctl_layout13.append(
-                xui.create("xui.UI.Element")
-                .setHost(host,"xui_ui_element1")
-                .setDock("fill")
-                .setLeft("0.8333333333333334em")
-                .setTop("15em")
-                .setHtml("<font size=\"6\"><b>Selamat Datang Bro<br></b></font>"),
-                "main"
-            );
-            
-            host.ctl_layout13.append(
-                xui.create("xui.UI.Span")
-                .setHost(host,"xui_ui_span3")
-                .setTips("who am i")
-                .setLeft("12.5em")
-                .setTop("8.333333333333334em")
-                .setWidth("20.333333333333332em")
-                .setHeight("1.8333333333333333em")
-                .setHtml("span element<br>"),
-                "main"
-            );
-            
-            host.ctl_layout13.append(
                 xui.create("xui.UI.Block")
                 .setHost(host,"xui_ui_block8")
                 .setDock("fill")
@@ -146,6 +124,37 @@ xui.Class('App', 'xui.Module',{
                 ])
                 .setLeft("0em")
                 .setTop("0em")
+            );
+            
+            host.ctl_layout13.append(
+                xui.create("xui.UI.Tabs")
+                .setHost(host,"xui_ui_tabs6")
+                .setItems([
+                    {
+                        "id":"a",
+                        "caption":"page1",
+                        "imageClass":"xui-icon-xui"
+                    },
+                    {
+                        "id":"b",
+                        "caption":"page2"
+                    },
+                    {
+                        "id":"c",
+                        "caption":"page3"
+                    },
+                    {
+                        "id":"d",
+                        "caption":"page4",
+                        "closeBtn":true,
+                        "optBtn":"xui-uicmd-opt",
+                        "popBtn":true
+                    }
+                ])
+                .setLeft("0em")
+                .setTop("0em")
+                .setValue("a"),
+                "main"
             );
             
             host.ctl_layout5.append(
